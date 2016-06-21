@@ -60,7 +60,7 @@ static zend_op_array *simple_guard_compile_file(zend_file_handle *file_handle, i
 				break;
 			}
 			fread(buf,sizeof(buf),1,source);
-			if(memcmp(buf,HEAD_SIGN,sizeof(HEAD_SIGN)) !=0){
+			if(memcmp(buf,HEAD_SIGN,sizeof(HEAD_SIGN)-1) !=0){
 					fclose(source);
 					break;
 			}
