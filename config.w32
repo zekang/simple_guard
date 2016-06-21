@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("simple_guard", "for simple_guard support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("simple_guard", "enable simple_guard support", "no");
+
+if (PHP_SIMPLE_GUARD != "no") {
+	EXTENSION("simple_guard", "simple_guard.c");
+}
+
